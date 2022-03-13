@@ -2,9 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-class Elliptic:
-    def __init__(self, end_time, xlim, u0, border_cond):
-        self.a = 1.11e-4
+class Parabolic:
+    def __init__(self, diffusivity, end_time, xlim, u0, border_cond):
+        self.a = diffusivity
         self.dt, self.dx = 0.001, 0.001
         self.T = np.linspace(0, end_time, end_time * 100 + 1)
         a, b = xlim
